@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Projects showcase"
+    />
+    <meta
+      name="keywords"
+      content="Projects, Personal Portfolio, Software Engineer, Developer, Responsive"
+    />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Projects - Software Engineer & Data Analyst Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Swiper Bundle -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+  .project-filter {
+    margin-bottom: 40px;
+  }
+
+  .project-filter-btn {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .project-filter-btn.active {
+    font-weight: 700;
+  }
+
+  .project-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .project-item.is-hidden {
+    display: none;
+  }
+</style>
+  </head>
+
+  <body class="tw-magic-cursor">
+    <!-- ======================== Marquee section start =========================== -->
+        <div class="marquee tw-pt-10 pb-40 bg-white">
+          <div
+            class="marquee_left d-flex align-items-center justify-content-between tw-gap-16 overflow-hidden"
+          >
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-black"
+              >
+                Projects<span class="text-black">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-stroke"
+              >
+              <span style="color: transparent; -webkit-text-stroke: 2px #000;">Projects</span>
+                <span class="text-black">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-black"
+              >
+                Projects<span class="text-black">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-stroke"
+              >
+              <span style="color: transparent; -webkit-text-stroke: 2px #000;">Projects</span>
+                <span class="text-black">-</span>
+              </h2>
+            </div>
+            <div>
+              <h2
+                class="marquee-two-title marquee-three-title text-uppercase text-black"
+              >
+                Projects<span class="text-white">-</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+<!-- ======================== Projects section start =========================== -->
+<section class="projects-section pt-40">
+  <div class="container " >
+
+    <!-- Project Filter -->
+    <div class="project-filter d-flex align-items-center flex-wrap tw-gap-8">
+      <button
+        type="button"
+        class="project-filter-btn active"
+        data-filter="all"
+      >
+        All
+      </button>
+
+      <button
+        type="button"
+        class="project-filter-btn"
+        data-filter="software-engineering"
+      >
+        Software Engineering
+      </button>
+
+      <button
+        type="button"
+        class="project-filter-btn"
+        data-filter="data-analytics"
+      >
+        Data Analytics
+      </button>
+
+      <button
+        type="button"
+        class="project-filter-btn"
+        data-filter="bi-engineering"
+      >
+        BI Engineering
+      </button>
+    </div>
+
+    <!-- Project List -->
+    <div class="row project-list">
+
+      <!-- Software Engineering -->
+      <div
+        class="col-lg-4 col-md-6 project-item"
+        data-category="software-engineering"
+      >
+        <div class="project-card">
+          <h3>Project Name</h3>
+          <p>Software Engineering</p>
+        </div>
+      </div>
+
+      <!-- Data Analytics -->
+      <div
+        class="col-lg-4 col-md-6 project-item"
+        data-category="data-analytics"
+      >
+        <div class="project-card">
+          <h3>Project Name</h3>
+          <p>Data Analytics</p>
+        </div>
+      </div>
+
+      <!-- BI Engineering -->
+      <div
+        class="col-lg-4 col-md-6 project-item"
+        data-category="bi-engineering"
+      >
+        <div class="project-card">
+          <h3>Project Name</h3>
+          <p>BI Engineering</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- ======================== Projects section end =========================== -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".project-filter-btn");
+    const projectItems = document.querySelectorAll(".project-item");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        projectItems.forEach((item) => {
+            const category = item.dataset.category;
+
+            if (filter === "all" || category === filter) {
+            item.classList.remove("is-hidden");
+            } else {
+            item.classList.add("is-hidden");
+            }
+        });
+        });
+    });
+    });
+    </script>
+        
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- phosphor Js -->
+    <script src="assets/js/phosphor-icon.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <!-- aos -->
+    <script src="assets/js/aos.js"></script>
+    <!-- magnific popup js -->
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <!-- marquee -->
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <!-- counterup js -->
+    <script src="assets/js/purecounter.js"></script>
+    <!-- swiper bundle js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- gsap js -->
+    <script src="assets/js/gsap/gsap.js"></script>
+    <!-- Scroll plugin -->
+    <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <!-- Scroll smoother -->
+    <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+    <!-- Scroll Trigger -->
+    <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+    <!-- split text -->
+    <script src="assets/js/gsap/gsap-split-text.js"></script>
+    <!-- chroma js -->
+    <script src="assets/js/gsap/chroma.min.js"></script>
+
+    <!-- custom GSAP -->
+    <script src="assets/js/slider-active.js"></script>
+    <!-- custom GSAP -->
+    <script src="assets/js/custom-gsap.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <!-- cursor js -->
+    <script src="assets/js/tw-cursor.js"></script>
+  </body>
+</html>
